@@ -4,6 +4,7 @@ import unittest
 
 
 from base.api_method import RunMethod
+from case_test.run import api_url
 from config.setting import api_excel_path, logging, qjbl, headers
 from util import paramunittest
 from util.Variate import Variate
@@ -14,7 +15,7 @@ test_case= api_excel.get_data()
 
 
 # url
-base_url='http://10.100.10.198:8556'
+base_url='http://'+api_url
 
 
 
@@ -131,6 +132,17 @@ class TestDemo(RunMethod):
                 else:
                     RESULT.append(False)
                     raise Exception("respons返回数据长度小于" + e)
+
+            # 不包含关键字
+            elif "not" in e:
+                e=e.strip("not ")
+                print("判断当返回不包含："+ e )
+                if e not in r.text:
+                    RESULT.append(True)
+                else:
+                    RESULT.append(False)
+                    raise Exception("respons返回数据包含:" + e)
+
 
             # 包含
             else:
