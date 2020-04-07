@@ -4,6 +4,7 @@ import logging.config
 qjbl = {}
 # 请求头
 headers={}
+api_url=''
 
 log_file_path =os.path.join(os.path.dirname(__file__).split("api_auto")[0]+"api_auto",'config','log.conf')
 logging.config.fileConfig(log_file_path)
@@ -23,8 +24,8 @@ report_screenshot = os.path.join(base_dir,'report',"screenshot")
 report_path = os.path.join(base_dir,'report',"reports")
 
 # 用例excel存放目录
-excel_path= os.path.join(base_dir,'test_case',"case_excel","test_cese.xlsx")
-api_excel_path= os.path.join(base_dir,"case_excel","test_cese.xlsx")
+excel_path= os.path.join(base_dir,'test_case',"case_excel","test.xlsx")
+api_excel_path= os.path.join(base_dir,"case_excel","test.xlsx")
 
 # driver存放目录
 driver_path = os.path.join(base_dir,'base',"chromedriver.exe")
