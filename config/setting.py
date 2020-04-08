@@ -4,7 +4,7 @@ import logging.config
 qjbl = {}
 # 请求头
 headers={}
-api_url=''
+
 
 log_file_path =os.path.join(os.path.dirname(__file__).split("api_auto")[0]+"api_auto",'config','log.conf')
 logging.config.fileConfig(log_file_path)
