@@ -1,10 +1,10 @@
 import re
+import sys
 import unittest
 
 
 
 from base.api_method import RunMethod
-from case_test.run import api_url
 from config.setting import api_excel_path, logging, qjbl, headers
 from util import paramunittest
 from util.Variate import Variate
@@ -15,7 +15,7 @@ test_case= api_excel.get_data()
 
 
 # url
-base_url='http://'+api_url
+base_url='http://'+sys.argv[1]
 
 
 

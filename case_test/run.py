@@ -12,7 +12,7 @@ from base.HTMLTestRunner import HTMLTestRunner
 from util.send_email import send_mail
 from config.setting import report_path, api_test_dir
 
-api_url=sys.argv[1]
+
 
 # 加载单个用例
 # suite = unittest.TestLoader().loadTestsFromTestCase(TestDemo)
