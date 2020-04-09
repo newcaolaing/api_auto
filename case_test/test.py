@@ -1,6 +1,21 @@
-a = 10000
+import json
+import re
+
+a = """
+{
+"name":"test",
+"dict": {"list":[{"c":"a"},{"c":"a"},{"c":"a"}},
+"list": [{"name":"dict1"},{"name":"dict2"}],
+"list2":[1,2,3,"1111"]
+}
+"""
 
 
-for x in range(20):
-  a=a*1.1
-  print(a)
+b  =re.sub("[^{}[\]]","",a)
+print(b)
+
+
+c= re.sub("(:\".*?\")","",a)
+c= re.sub("(\[)([^{}\[\]]*?)(\])","\1\3",c)
+print(c)
+

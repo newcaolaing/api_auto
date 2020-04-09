@@ -50,5 +50,11 @@ class Variate():
                             headers[key] = pattern[0]
                         logging.info("添加变量成功：" + str(qjbl))
 
+                #用户自定义变量
+                elif site == "user-data":
+                        qjbl[key] = value
+
+
+
             except:
                 logging.error(name + " 变量定义失败 ")
